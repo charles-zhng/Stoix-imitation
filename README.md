@@ -1,3 +1,5 @@
+### Threw together this to try vmpo with rodent imitation learning
+
 <p align="center">
     <a href="docs/images/stoix.png">
         <img src="docs/images/stoix.png" alt="Stoix logo" width="30%"/>
