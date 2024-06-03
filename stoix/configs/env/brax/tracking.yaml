@@ -2,11 +2,14 @@
 env_name: brax
 
 scenario:
-  name: ant
-  task_name: ant
+  name: humanoid_tracking
+  task_name: humanoid_tracking
 
 kwargs: {
-  backend: mjx
+  solver: cg,
+  iterations: 6,
+  ls_iterations: 6,
+  clip_path: humanoid_traj.p
 }
 
 # Defines the metric that will be used to evaluate the performance of the agent.

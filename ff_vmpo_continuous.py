@@ -51,6 +51,8 @@ from stoix.utils.total_timestep_checker import check_total_timesteps
 from stoix.utils.training import make_learning_rate
 from stoix.wrappers.episode_metrics import get_final_step_metrics
 
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 def get_learner_fn(
     env: Environment,
@@ -678,7 +680,7 @@ def run_experiment(_config: DictConfig) -> float:
 
 
 @hydra.main(
-    config_path="../../configs", config_name="default_ff_vmpo_continuous.yaml", version_base="1.2"
+    config_path="stoix/configs", config_name="default_ff_vmpo_continuous.yaml", version_base="1.2"
 )
 def hydra_entry_point(cfg: DictConfig) -> float:
     """Experiment entry point."""

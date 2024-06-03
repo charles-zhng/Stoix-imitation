@@ -8,6 +8,7 @@ import jaxmarl
 import jumanji
 import pgx
 import xminigrid
+from brax import envs
 from brax.envs import _envs as brax_environments
 from brax.envs import create as brax_make
 from gymnax import registered_envs as gymnax_environments
@@ -28,6 +29,8 @@ from stoix.wrappers.jumanji import MultiBoundedToBounded, MultiDiscreteToDiscret
 from stoix.wrappers.pgx import PGXWrapper
 from stoix.wrappers.xminigrid import XMiniGridWrapper
 
+from humanoid import HumanoidTracking
+envs.register_environment("humanoid_tracking", HumanoidTracking)
 
 def make_jumanji_env(
     env_name: str,
