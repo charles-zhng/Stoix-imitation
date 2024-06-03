@@ -1,5 +1,6 @@
 ### Threw together this to try vmpo with rodent imitation learning
-
+- first working run with this: `python3 ff_vmpo_continuous.py env=brax/tracking logger.checkpointing.save_model=True arch.total_num_envs=256 arch.num_eval_episodes=16`
+- the env here is old--some bugs were fixed since
 <p align="center">
     <a href="docs/images/stoix.png">
         <img src="docs/images/stoix.png" alt="Stoix logo" width="30%"/>
